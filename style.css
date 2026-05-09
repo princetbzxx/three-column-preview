@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+    transition: 0.3s;
+    background: white;
+    cursor: pointer;
+    border: none;
+    margin-top: 50px;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+    width: 150px;
+    height: auto;
+    border: 2px solid transparent;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;   
+}
+   
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+}
+.cards-wrapper{
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
+}
+.card{
+    padding: 3rem;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h1{
+    color: white;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.card p{
+    color: hsl(0, 0%, 100%, 0.75);
+    line-height: 1.5;
+    font-weight: 400;
+   margin-top: 50px;
+}   
+
+.cards{
+    display: flex;
+     flex-direction: column;
+    
+    justify-content: center;
+}
+.card.sedans {
+  background: hsl(31, 77%, 52%);
+}
+
+
+.card.suvs {
+    background: hsl(184, 100%, 22%)
+}
+
+.card.luxury {
+    background: hsl(179, 100%, 13%);
+}
+
+.card.sedans button {
+  color: hsl(31, 77%, 52%);
+}
+.card.suvs button {
+  color: hsl(184, 100%, 22%);
+}
+.card.luxury button {
+  color: hsl(179, 100%, 13%);
+}
+.card.sedans button:hover,
+.card.suvs button:hover,
+.card.luxury button:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.icon{
+    width: 60px;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+@media (min-width: 950px) {
+  .cards {
+    flex-direction: row;
+  }
+}
